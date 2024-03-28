@@ -8,9 +8,7 @@ https://vurilo-assignment.vercel.app/
 
 ## Technologies Used
 
-NEXTJS
-TypeScript
-Tailwind CSS
+NEXTJS, TypeScript and Tailwind CSS
 
 ## Getting Started
 
