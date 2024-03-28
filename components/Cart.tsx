@@ -6,23 +6,23 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { RiShoppingBag3Fill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
 
-interface CartItem {
-	id: number;
-	name: string;
-	price: string;
-	image: string;
-}
+// interface CartItem {
+// 	id: number;
+// 	name: string;
+// 	price: string;
+// 	image: string;
+// }
 
-interface CartContext {
-	setShowCart: (value: boolean) => void;
-	totalQuantities: number;
-	cartItems: CartItem[];
-	onRemove: (item: CartItem) => void;
-}
+// interface CartContext {
+// 	setShowCart: (value: boolean) => void;
+// 	totalQuantities: number;
+// 	cartItems: CartItem[];
+// 	onRemove: (item: CartItem) => void;
+// }
 
 const Cart: React.FC = () => {
 	const { setShowCart, totalQuantities, cartItems, onRemove } =
-		useCartContext() as CartContext;
+		useCartContext();
 
 	const handleCheckout = () => {
 		console.log("Checkout");
@@ -61,7 +61,7 @@ const Cart: React.FC = () => {
 				{cartItems.length >= 1 && (
 					<div className="relative flex flex-col justify-center items-center gap-10">
 						<div className="overflow-auto max-h-[70vh] py-5">
-							{cartItems.map((item: CartItem) => (
+							{cartItems.map((item) => (
 								<div
 									className="flex justify-center items-center p-[20px] gap-7"
 									key={item.id}
