@@ -19,7 +19,7 @@ const ProductCard: React.FC = () => {
 	const { products, isLoading, error } = useFetch({ url: "/products.json" });
 	const [currentIndex, setCurrentIndex] = useState<number | null>(null);
 	const [cartItem, setCartItem] = useState<Product | null>(null);
-	const { onAdd } = useCartContext() as CartContext;
+	const { onAdd } = useCartContext() as unknown as CartContext;
 
 	if (isLoading) {
 		return <div>Loading...</div>;
